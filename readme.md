@@ -51,6 +51,7 @@ gulp.dest()
 ####DEMO使用
 - 把本项目pull下来
 - `npm install`
+- `bower install`
 - 安装[chrome插件](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)
 - `gulp`
 - 可以试着编辑html, coffeescript, stylus看看效果
