@@ -13,7 +13,8 @@ stylus     = require "gulp-stylus"
 watch      = require "gulp-watch"
 livereload = require "gulp-livereload"
 clean      = require "gulp-clean"
-
+jshint     = require "gulp-jshint"
+stylish    = require "jshint-stylish"
 
 #watch file change
 gulp.task "watch", ->
@@ -48,9 +49,14 @@ gulp.task "clean", ->
   ).pipe clean()
   return
 
+#jshint
+gulp.task "jshint", ->
+  gulp.src "app/scripts/*.js"
+    .pipe jshint()
+    .pipe jshint.reporter(stylish)
 
 # build task
-gulp.task "build", ["clean"], ->
+gulp.task "build", ["clean", "jshint"], ->
   gulp.src("app/images/*")
   .pipe imagemin()
   .pipe gulp.dest("dist/images/")
