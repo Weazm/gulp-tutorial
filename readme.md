@@ -33,6 +33,7 @@ npm install gulp-util -S
 
 ####基础API
 >详情可以查看[gulp官方文档](https://github.com/gulpjs/gulp/blob/master/docs/API.md)
+
 ```
 <!-- 创建一个gulp的任务 -->
 gulp.task();
